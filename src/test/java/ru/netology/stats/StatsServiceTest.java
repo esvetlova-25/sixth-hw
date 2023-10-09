@@ -46,13 +46,13 @@ public class StatsServiceTest {
     public void shouldFindHigherAverageSales() {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected = 1;
+        int expected = 12;
         int actual = service.getHigherAverageSales(sales);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void shouldFindBelowAverageSales() {
+    public void shouldFindBelowAverageSalesBetweenEnds() {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 11;

@@ -45,7 +45,7 @@ public class StatsService {
     public int getHigherAverageSales(int[] sales) {
         int higherAverage = 0;
         int averageSales = calculateSumSales(sales) / sales.length;
-        for (int i = 0; i > sales.length; i++) {
+        for (int i = 0; i < sales.length; i++) {
             if (sales[i] > averageSales) {
                 higherAverage = i;
             }
