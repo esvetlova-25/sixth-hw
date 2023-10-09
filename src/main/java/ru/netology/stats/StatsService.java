@@ -9,14 +9,15 @@ public class StatsService {
         }
         return sum;
     }
+
     public int getAverageSales(int[] sales) {
         int averageSales = 0;
-        for (int i = 0; i < sales.length; i++)
-        {
+        for (int i = 0; i < sales.length; i++) {
             averageSales = calculateSumSales(sales) / sales.length;
         }
         return averageSales;
     }
+
     public int getMinSales(int[] sales) {
         int minMonth = 0; // номер месяца с минимальными продажами среди просмотренных ранее
 
@@ -39,7 +40,6 @@ public class StatsService {
         }
         return maxMonth + 1;
     }
-
 
 
     public int getHigherAverageSales(int[] sales) {

@@ -12,6 +12,7 @@ public class StatsServiceTest {
         int actual = service.calculateSumSales(sales);
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldFindAverage() {
         StatsService service = new StatsService();
@@ -20,6 +21,7 @@ public class StatsServiceTest {
         int actual = service.getAverageSales(sales);
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
 
     public void shouldFindMin() {
@@ -38,7 +40,6 @@ public class StatsServiceTest {
         int actual = service.getMaxSales(sales);
         Assertions.assertEquals(expected, actual);
     }
-
 
 
     @Test
