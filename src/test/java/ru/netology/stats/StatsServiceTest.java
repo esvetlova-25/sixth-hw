@@ -12,7 +12,14 @@ public class StatsServiceTest {
         int actual = service.calculateSumSales(sales);
         Assertions.assertEquals(expected, actual);
     }
-
+    @Test
+    public void shouldFindAverage() {
+        StatsService service = new StatsService();
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 15;
+        int actual = service.getAverageSales(sales);
+        Assertions.assertEquals(expected, actual);
+    }
     @Test
 
     public void shouldFindMin() {
@@ -32,14 +39,7 @@ public class StatsServiceTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
-    public void shouldFindAverage() {
-        StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected = 15;
-        int actual = service.getAverageSales(sales);
-        Assertions.assertEquals(expected, actual);
-    }
+
 
     @Test
     public void shouldFindHigherAverageSales() {
